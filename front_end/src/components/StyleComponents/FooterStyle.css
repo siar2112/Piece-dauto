@@ -1,0 +1,176 @@
+.credit {
+    background-color: black;
+    color: white;
+    padding-top: 2%;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-family: "Playfair Display", serif;
+    display: flex;
+    margin-top: 10%;
+    border-top:solid 2px grey ;
+}
+
+.logo_img img{
+    height: 175px;
+    width: 250px;
+}
+
+
+.credit_col_1 {
+    list-style-type: none;
+    width: 45%;
+    float: left;
+    text-align: left;
+}
+
+.credit_col_2 {
+    margin-top: 10%;
+    float: right;
+    list-style-type: none;
+    font-size: 25px;
+}
+
+.credit_logo {
+    list-style-type: none;
+    display: flex;
+    padding-left: 0;
+}
+
+#Book_your_place {
+    border-bottom: 1px solid grey;
+    font-size: 40px;
+}
+
+#Barber_credit {
+    font-size: 20px;
+    color: #9c9c9c;
+}
+
+.credit_col_1 li {
+    padding-bottom: 3%;
+    font-size: 40px;
+    padding-right: 10%;
+}
+
+#second_li {
+    padding-bottom: 2%;
+}
+
+.credit_col_3 {
+    margin-top: 10%;
+    float: right;
+    list-style-type: none;
+    margin-left: 5%;
+    font-size: 25px;
+}
+
+.credit_col_3 h1, .credit_col_2 h1 {
+    border-bottom: solid 1px grey;
+    color: white;
+}
+
+.credit_col_2 li, .credit_col_3 li {
+    padding-bottom: 5%;
+    color: white;
+}
+
+.Credit_Barber {
+    color: lightgray;
+    font-size: 30px;
+    border-radius: 30px;
+    border: 1px solid lightgrey;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    text-decoration: none;
+    text-align: center;
+
+}
+
+.Credit_Barber:hover {
+    background-color: darkgray;
+    color: white;
+}
+
+.credit_logo li a {
+    color: white;
+    text-decoration: none;
+}
+
+.credit_logo li a:hover {
+    color: lightgray;
+}
+
+.copyright {
+    background-color:black;
+    color: white;
+    text-align: center;
+    padding-bottom: 2%;
+}
+
+.credit_col_2 li a {
+    text-decoration: none;
+    color: white;
+}
+
+.credit_col_2 li a:hover {
+    color: lightgray;
+    text-decoration: underline;
+}
+
+
+@media screen and (max-width: 1000px) {
+    .credit {
+        display: block;
+    }
+    .credit_col_1 {
+        float: none;
+        width: 100%;
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .Credit_Barber{
+        font-size: 20px;
+    }
+
+
+    .credit_col_1 li {
+        padding-right: 0;
+    }
+    .credit_logo li {
+        padding-right: 0;
+    }
+    #Book_your_place {
+        font-size: 20px;
+    }
+
+    .credit_logo{
+        margin-top: 5%;
+    }
+
+    .credit_logo li {
+        margin-left: 15%;
+        font-size: 25px;
+    }
+    .credit_col_2 {
+        float: none;
+        width: 100%;
+        text-align: center;
+        font-size: 20px;
+    }
+    .credit_col_3 {
+        float: none;
+        width: 100%;
+        text-align: center;
+        margin-left: 0;
+        font-size: 20px;
+    }
+    .credit {
+        padding-bottom: 10%;
+    }
+    .copyright {
+        text-align: center;
+    }
+}

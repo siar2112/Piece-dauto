@@ -1,0 +1,74 @@
+
+.ServiceGrid{
+    list-style-type: none;
+    margin-top:5%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 25px; /* Adjust the gap value as needed for spacing */
+}
+
+.ServiceGridItem {
+    opacity: 0;
+    transform: translateY(-40px); /* Initial hidden state */
+    transition: opacity 4s ease-out, transform 3s ease-out;
+}
+
+.ServiceGridItem.visible {
+    opacity: 1;
+    transform: translateY(0); /* Final state after animation */
+}
+ .MobileFirst{
+     display: none;
+ }
+
+ canvas{
+     display: none;
+ }
+
+ .ServiceMobileGrid{
+     display: none;
+ }
+
+@media screen and (max-width: 1000px) {
+    .ServiceGrid {
+        display: none ;
+        grid-template-columns: none;
+        grid-template-rows: none;
+        gap: 0;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .ServiceGridItem {
+        padding-bottom: 5%;
+        opacity: 1!important;
+        transition: none !important;
+        transform: none !important;
+    }
+
+    .ServiceGridItem.visible {
+        opacity: 1;
+        transform: none;
+    }
+
+    .CarModelContainer {
+        display: none;
+    }
+
+    .MainContainer{
+        display: none;
+    }
+
+    canvas{
+        display: none;
+    }
+
+    .MobileFirst{
+        display: block;
+    }
+
+    .ServiceMobileGrid{
+        display: block;
+    }
+}

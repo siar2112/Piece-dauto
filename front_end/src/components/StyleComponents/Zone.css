@@ -1,0 +1,142 @@
+.zone-container {
+    padding-left: 5%;
+    display: flex;
+    padding-bottom: 5%;
+    position: relative;
+    z-index: 1;
+    background-image: url('photo-du-cour-a-scrap-du-haut-2880w.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Creates the parallax effect */
+    height: 100vh; /* Ensure container takes full height for scrolling */
+    padding-top: 5%;
+    color: white;
+}
+
+.zone-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay with 50% opacity */
+    z-index: -1;
+}
+
+
+
+.zone-container h1{
+    font-size: 4vw;
+}
+
+.zone-infos-left{
+    padding-top: 5%;
+    float: left;
+    font-size: 1.4vw;
+    text-align: justify;
+    width: 40%;
+}
+
+.ServiceGridItem {
+    opacity: 0;
+    transform: translateY(-40px); /* Initial hidden state */
+    transition: opacity 4s ease-out, transform 3s ease-out;
+}
+
+.ServiceGridItem.visible {
+    opacity: 1;
+    transform: translateY(0); /* Final state after animation */
+}
+
+.zone-text{
+    opacity: 0;
+    transform: translateY(-40px); /* Initial hidden state */
+    transition: opacity 4s ease-out, transform 3s ease-out;
+}
+
+.zone-text.visible {
+    opacity: 1;
+    transform: translateY(0); /* Final state after animation */
+}
+
+.zone-text p{
+    font-size: 20px;
+}
+
+.zone-address{
+    margin-top: 5%;
+}
+
+.zone-schedule th{
+    font-size: 20px;
+}
+
+.zone-address th{
+    font-size: 20px;
+}
+
+.zone-schedule{
+    border-collapse: separate;
+    text-align: justify;
+}
+
+.zone-schedule caption{
+    font-size: 30px;
+    caption-side: top;
+    color: white;
+}
+
+
+.zone-infos-right{
+    margin-left: 20%;
+    animation: forwards 3s fade;
+}
+
+#google_map{
+}
+
+
+@media screen and (max-width: 1000px){
+    .zone-container {
+        display: block;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .zone-container h1{
+        text-align: center;
+        font-size: 4.2vw;
+    }
+
+    .zone-text p{
+        font-size: 21px!important;
+        text-align: center;
+        padding-top: 2%;
+    }
+
+    .zone-infos-left{
+        float: none;
+        text-align: left;
+        width: 100%;
+        padding: 5%;
+    }
+
+    .zone-infos-right{
+        float: none;
+        margin-left: 0;
+        margin-top: 5%;
+    }
+
+    .zone-schedule{
+        margin-top: 5%;
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    .zone-address caption{
+        width: 100%;
+    }
+
+
+}
