@@ -1,0 +1,77 @@
+
+.piece_header{
+    font-size: 2.5vw;
+    color: black;
+    text-align: center;
+    padding-bottom: 2%;
+    margin-top: 2%;
+}
+
+.piece {
+    border: 1px solid gray;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    column-gap: 5%; /* Adjusts space between columns */
+    padding: 20px; /* Adds some padding inside the grid */
+    align-items: center; /* Vertically align items in the grid */
+    width: 80%;
+    margin-left: 10%;
+}
+
+/* Text Column */
+.piece_text {
+    color: black;
+    text-align: left;
+}
+
+.piece_text_1 {
+    font-size: 1.2vw;
+    text-align: left;
+}
+
+/* Image Column */
+.piece_img {
+    justify-self: end; /* Aligns the image to the right side of its column */
+}
+
+.piece_img img {
+    width: 100%; /* Makes the image responsive */
+    border-radius: 10px; /* Adds a rounded border to the image */
+    max-width: 800px; /* Increase the maximum width for a larger image */
+    min-width: 600px; /* Set a minimum width so it doesn't get too small */
+}
+
+@media screen and (max-width:1000px) {
+    .piece{
+        padding-top: 10%;
+        column-count: 1;
+    }
+    .piece h1{
+        font-size: 24px;
+    }
+
+    .piece p1{
+        font-size: 14px;
+    }
+
+    .piece_text{
+        text-align: center;
+        margin-top: 0;
+        margin-left: 0;
+        padding-right: 10%;
+        padding-left: 10%;
+    }
+
+
+    .piece_img{
+        margin-top: 3%;
+    }
+    .piece_img img{
+        width:350px ;
+        height:400px ;
+        margin-right: 15%;
+        float: right;
+    }
+
+}
