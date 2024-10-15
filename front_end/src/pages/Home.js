@@ -1,5 +1,4 @@
 import React, { useRef, useEffect, useState } from 'react';
-import CarModel from '../components/CarModel';
 import HomePresentation from "../components/HomePresentation";
 import ServiceBox from "../components/ServiceBox";
 import './StylePages/HomeStyle.css';
@@ -13,16 +12,27 @@ const Home = () => {
     const isServiceGridVisible = useIntersectionObserver(ServiceGridRef);
 
     const iframeRef = useRef(null); // Reference to the iframe
+    const iframeRef2 = useRef(null); // Reference to the iframe
     const iframeContainerRef = useRef(null); // Reference to the iframe container
     const [iframeContainerHeight, setIframeContainerHeight] = useState(0); // State to store the height
+    const iframeContainerRef2 = useRef(null); // Reference to the second iframe container
+    const [iframeContainerHeight2, setIframeContainerHeight2] = useState(0); // State to store the second iframe container's height
 
     // Function to calculate and update the iframe container's height
     const updateIframeHeight = () => {
         if (iframeContainerRef.current) {
-            const height = iframeContainerRef.current.getBoundingClientRect().height;
-            setIframeContainerHeight(height);
+            // Correctly define the height1 variable
+            const height1 = iframeContainerRef.current.getBoundingClientRect().height;
+            setIframeContainerHeight(height1); // Store the height of the first iframe container
+
+            if (iframeContainerRef2.current) {
+                // Correctly define the height2 variable and add it to height1
+                const height2 = iframeContainerRef2.current.getBoundingClientRect().height;
+                setIframeContainerHeight2(height1 + height2); // Set the combined height of both containers
+            }
         }
     };
+
 
     useEffect(() => {
         updateIframeHeight(); // Call function on component mount
@@ -43,7 +53,6 @@ const Home = () => {
                 <HomePresentation/>
             </main>
 
-            <CarModel className="CarModelContainer"/>
 
             {/* Iframe Container */}
             <div
@@ -93,6 +102,7 @@ const Home = () => {
             ></div>
 
             <div
+                ref={iframeContainerRef2}
                 className="ServiceMobileGrid"
                 style={{
                     position: 'relative',
@@ -109,6 +119,7 @@ const Home = () => {
                 }}
             >
                 <iframe
+                    ref={iframeRef2}
                     loading="lazy"
                     style={{
                         position: 'absolute',
@@ -124,6 +135,19 @@ const Home = () => {
                     title="Service mobile Grid"
                 ></iframe>
             </div>
+            {/* Second Progress Bar Cover */}
+            <div
+                style={{
+                    position: 'absolute',
+                    bottom: '0',
+                    left: '0',
+                    top: `${iframeContainerHeight2 + 140}px`, // Dynamically calculate the top position for second iframe
+                    width: '100%',
+                    height: '40px', // Adjust height as necessary to cover the progress bar
+                    backgroundColor: 'white', // You can make this transparent or any color that fits
+                    pointerEvents: 'none', // Ensures that the video is still clickable
+                }}
+            ></div>
 
 
             <ul className="ServiceGrid">
@@ -161,7 +185,7 @@ const Home = () => {
                 <Zone></Zone>
             </div>
 
-            <div style={{marginTop: '5%'}}>
+            <div style={{marginTop: '5%',paddingBottom:'10%'}}>
                 <GoogleReviews></GoogleReviews>
             </div>
 

@@ -22,9 +22,9 @@ const Navigation = () => {
                 <Nav className="ml-auto" style={{display: "flex", justifyContent: "space-around", alignItems: "center"}}>
                     <Nav.Link className="nav-link-custom"  style={{ marginLeft: "40px" }} onClick={() => handleLinkClick("/")}>Accueil</Nav.Link>
                     <Nav.Link className="nav-link-custom"  style={{ marginLeft: "40px" }} onClick={() => handleLinkClick("/Piece")}>Pièce</Nav.Link>
-                    <Nav.Link className="nav-link-custom"  style={{ marginLeft: "40px" }} onClick={() => handleLinkClick("/about")}>Mécanique générale</Nav.Link>
-                    <Nav.Link className="nav-link-custom"  style={{ marginLeft: "40px" }} onClick={() => handleLinkClick("/catalogue")}>Achat de véhicule</Nav.Link>
-                    <Nav.Link className="nav-link-custom"  style={{ marginLeft: "40px" }} onClick={() => handleLinkClick("/joindre")}>Vente d'autos</Nav.Link>
+                    <Nav.Link className="nav-link-custom"  style={{ marginLeft: "40px" }} onClick={() => handleLinkClick("/Mecanique")}>Mécanique générale</Nav.Link>
+                    <Nav.Link className="nav-link-custom"  style={{ marginLeft: "40px" }} onClick={() => handleLinkClick("/Achat")}>Achat de véhicule</Nav.Link>
+                    <Nav.Link className="nav-link-custom"  style={{ marginLeft: "40px" }} onClick={() => handleLinkClick("/Vente")}>Vente d'autos</Nav.Link>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>

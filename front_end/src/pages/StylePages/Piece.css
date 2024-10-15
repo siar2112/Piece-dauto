@@ -8,8 +8,6 @@
 }
 
 .piece {
-    border: 1px solid gray;
-    border-radius: 10px;
     display: grid;
     grid-template-columns: 1fr 1fr; /* Two equal columns */
     column-gap: 5%; /* Adjusts space between columns */
@@ -17,12 +15,14 @@
     align-items: center; /* Vertically align items in the grid */
     width: 80%;
     margin-left: 10%;
+    grid-template-areas: "text image"; /* Default layout: text on left, image on right */
 }
 
 /* Text Column */
 .piece_text {
     color: black;
     text-align: left;
+    grid-area: text; /* Use grid area for better control */
 }
 
 .piece_text_1 {
@@ -33,6 +33,7 @@
 /* Image Column */
 .piece_img {
     justify-self: end; /* Aligns the image to the right side of its column */
+    grid-area: image; /* Use grid area for better control */
 }
 
 .piece_img img {
@@ -42,17 +43,48 @@
     min-width: 600px; /* Set a minimum width so it doesn't get too small */
 }
 
+
+.piece_header_2{
+    font-size: 2.5vw;
+    color: black;
+    text-align: center;
+    padding-bottom: 2%;
+    margin-top: 5%;
+}
+
+.PieceGrid{
+    list-style-type: none;
+    margin-top:5%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Now 2 columns */
+    grid-template-rows: repeat(3, 1fr); /* Now 3 rows */
+    gap: 25px; /* Adjust the gap value as needed for spacing */
+    width: 80%;
+    margin-left: 10%;
+}
+
+.PieceGridItem {
+    opacity: 0;
+    transform: translateY(-40px); /* Initial hidden state */
+    transition: opacity 4s ease-out, transform 3s ease-out;
+}
+
+.PieceGridItem.visible {
+    opacity: 1;
+    transform: translateY(0); /* Final state after animation */
+}
+
+
 @media screen and (max-width:1000px) {
-    .piece{
-        padding-top: 10%;
-        column-count: 1;
-    }
-    .piece h1{
-        font-size: 24px;
+
+    .piece_header{
+        font-size: 40px;
     }
 
-    .piece p1{
-        font-size: 14px;
+    .piece{
+        grid-template-columns: 1fr; /* Stacks the columns */
+        grid-template-areas: "image" "text"; /* Switch the order: image first, text second */
+        text-align: center;
     }
 
     .piece_text{
@@ -63,15 +95,22 @@
         padding-left: 10%;
     }
 
+    .piece_text p{
+        font-size: 20px;
+    }
+
 
     .piece_img{
         margin-top: 3%;
+        margin-bottom: 20px; /* Adds some space between the image and the text */
+        width: 100%; /* Ensures the image remains responsive on small screens */
+        max-width: 100%; /* Makes sure the image does not overflow */
+        min-width: auto;
     }
     .piece_img img{
-        width:350px ;
-        height:400px ;
-        margin-right: 15%;
-        float: right;
+        width:100% ;
+        height:100% ;
     }
+
 
 }

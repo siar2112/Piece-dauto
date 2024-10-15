@@ -42,6 +42,7 @@
 
     .ServiceGridItem {
         padding-bottom: 5%;
+        margin-bottom: 5%;
         opacity: 1!important;
         transition: none !important;
         transform: none !important;

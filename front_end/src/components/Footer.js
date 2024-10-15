@@ -34,11 +34,11 @@ const Footer=()=>{
                         <ul className="credit_logo">
                             <li>
                                 <a target="_blank" rel="noopener noreferrer"
-                                   href="https://www.google.com/search?q=march%C3%A9+roshan&rlz=1C5CHFA_enCA866CA866&oq=march&gs_lcrp=EgZjaHJvbWUqBggCEEUYOzIGCAAQRRg8MgYIARBFGDkyBggCEEUYOzIPCAMQLhgnGK8BGMcBGIoFMhMIBBAuGIMBGK8BGMcBGLEDGIAEMgYIBRBFGDwyBggGEEUYPDIGCAcQRRg80gEIMjc1MGowajeoAgCwAgA&sourceid=chrome&ie=UTF-8">Google</a>
+                                   href="https://www.google.com/search?q=piece+d%27auto+ste+julie&rlz=1C1CHBF_enCA1126CA1126&oq=piece+d%27auto+ste+julie&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIICAEQABgWGB4yCAgCEAAYFhgeMggIAxAAGBYYHjIICAQQABgWGB4yCAgFEAAYFhgeMggIBhAAGBYYHjIICAcQABgWGB4yCggIEAAYgAQYogQyCggJEAAYgAQYogTSAQkxODExajBqMTWoAgiwAgE&sourceid=chrome&ie=UTF-8">Google</a>
                             </li>
                             <li>
                                 <a target="_blank" rel="noopener noreferrer"
-                                   href="https://www.instagram.com/marche_roshan/">Instagram<ion-icon name="logo-instagram"></ion-icon></a>
+                                   href="https://www.instagram.com">Instagram<ion-icon name="logo-instagram"></ion-icon></a>
                             </li>
                         </ul>
                     </li>
@@ -52,16 +52,16 @@ const Footer=()=>{
                         <Nav.Link onClick={() => handleLinkClick("/")}>Accueil</Nav.Link>
                     </li>
                     <li>
-                        <Nav.Link onClick={() => handleLinkClick("/about")}>Pièce</Nav.Link>
+                        <Nav.Link onClick={() => handleLinkClick("/Piece")}>Pièce</Nav.Link>
                     </li>
                     <li>
-                        <Nav.Link onClick={() => handleLinkClick("/catalogue")}>Mécanique générale</Nav.Link>
+                        <Nav.Link onClick={() => handleLinkClick("/Mecanique")}>Mécanique générale</Nav.Link>
                     </li>
                     <li>
-                        <Nav.Link href="#" onClick={() => handleLinkClick("/joindre")}>Achat de véhicule</Nav.Link>
+                        <Nav.Link href="#" onClick={() => handleLinkClick("/Achat")}>Achat de véhicule</Nav.Link>
                     </li>
                     <li>
-                        <Nav.Link href="#" onClick={() => handleLinkClick("/joindre")}>Vente d'autos</Nav.Link>
+                        <Nav.Link href="#" onClick={() => handleLinkClick("/Vente")}>Vente d'autos</Nav.Link>
                     </li>
                 </ul>
 
