@@ -11,7 +11,7 @@ const path = require('path');
 
 
 // Serve any static files
-app.use(express.static(path.join(__dirname, '../client/build')));
+app.use(express.static(path.join(__dirname, '../front_end/build')));
 
 
 
@@ -37,5 +37,5 @@ app.listen(PORT, () => {
 
 // Handle React routing, return all requests to React app
 app.get('*', function(req, res) {
-    res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
+    res.sendFile(path.join(__dirname, '../front_end/build', 'index.html'));
 });
