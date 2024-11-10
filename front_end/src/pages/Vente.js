@@ -5,9 +5,12 @@ import CarContainer from '../components/CarContainer.js';
 
 const CarListStyles = {
     listContainer: {
-        listStyleType: 'none',
+        display: 'grid',
+        gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', // Ensures responsive 3 columns max
+        gap: '20px', // Space between grid items
         padding: 0,
         margin: '20px 0',
+        listStyleType: 'none', // Remove bullet points
     },
     listItem: {
         marginBottom: '20px',
@@ -16,12 +19,10 @@ const CarListStyles = {
         alignItems: 'center',
     },
     carContainerStyle: {
-        width: '100%', // Full width in block layout
-        maxWidth: '600px', // Set a max width for readability
+        width: '100%',
+        maxWidth: '100%',
         border: '1px solid #ddd',
         borderRadius: '20px',
-        boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)',
-        overflow: 'hidden',
     },
 };
 
@@ -32,7 +33,7 @@ const Vente = () => {
             <h1 className="Vente_header">Vente d'autos</h1>
             <ul style={CarListStyles.listContainer}>
                 {Cars.map((car, index) => (
-                    <li key={index} style={CarListStyles.listItem}>
+                    <li className={'CarContainerItem'} key={index} style={CarListStyles.listItem}>
                         <CarContainer Car={car} style={CarListStyles.carContainerStyle} />
                     </li>
                 ))}

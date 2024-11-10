@@ -17,6 +17,10 @@ const CarContainer=({Car, style})=>{
                 <div style={{paddingLeft:"2%", marginTop:"2%",paddingRight:"2%",textAlign:"center"}}>
                     <h1 style={{fontSize:"25px"}}>{Car.name}</h1>
                     <p1>Prix: {Car.price}$</p1>
+                    <br/>
+                    <p2>Kilométrage: {Car.km}km </p2>
+                    <br/>
+                    <p3>{Car.description}</p3>
                 </div>
             </div>
         </div>

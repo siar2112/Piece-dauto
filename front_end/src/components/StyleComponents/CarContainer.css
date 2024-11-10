@@ -7,12 +7,8 @@
 
 .CarContainer:hover{
     cursor: pointer;
-    box-shadow: gray 0px 0px 22px 4px;
+    box-shadow: rgba(69, 65, 67, 0.65) 0px 0px 22px 4px;
 }
-
-
-
-
 
 .CarContainer img{
     height: 200px;
