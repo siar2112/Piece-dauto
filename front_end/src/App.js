@@ -7,9 +7,11 @@ import Navigation from './components/Navigation.js';
 import Footer from "./components/Footer";
 import Mecanique from "./pages/Mecanique";
 import Achat from "./pages/Achat";
+import Vente from "./pages/Vente";
+import CarDetails from "./pages/CarDetails";
 
 function App() {
-  return (
+    return (
       <div className="App">
         <Router>
             <Navigation/>
@@ -18,6 +20,8 @@ function App() {
                 <Route path="/Piece" element={<Piece/>}/>
                 <Route path="/Mecanique" element={<Mecanique/>}/>
                 <Route path="/Achat" element={<Achat/>}/>
+                <Route path="/Vente" element={<Vente/>}/>
+                <Route path="/car-details" element={<CarDetails/>}/>
             </Routes>
             <Footer/>
         </Router>

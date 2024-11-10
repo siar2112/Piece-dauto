@@ -1,0 +1,33 @@
+.CarContainer{
+    border-radius: 20px;
+    border:solid 1px grey;
+    text-align: left;
+    padding-bottom: 2%;
+}
+
+.CarContainer:hover{
+    cursor: pointer;
+    box-shadow: gray 0px 0px 22px 4px;
+}
+
+
+
+
+
+.CarContainer img{
+    height: 200px;
+}
+
+
+
+
+@media screen and (max-width:1000px){
+    .CarContainer img{
+        height: 100px;
+        border-radius: 0!important;
+    }
+
+    .CarContainer{
+        border: none;
+    }
+}

@@ -50,3 +50,9 @@ a{
     transform: rotate(360deg);
   }
 }
+
+
+
+@media screen and (max-width: 1000px) {
+
+}

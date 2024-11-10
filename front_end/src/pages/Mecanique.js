@@ -7,25 +7,37 @@ const Mecanique = () => {
     const Mec1ContainerRef = useRef(null); // Reference to the iframe container
     const [Mec1ContainerHeight, setMec1ContainerHeight] = useState(0); // State to store the height
 
-    const updateIframeHeight = () => {
+
+
+    const Mec2Ref = useRef(null); // Reference to the iframe
+    const Mec2ContainerRef = useRef(null); // Reference to the iframe container
+    const [Mec2ContainerHeight, setMec2ContainerHeight] = useState(0); // State to store the height
+
+
+    const updateMecIframeHeight = () => {
         if (Mec1ContainerRef.current) {
             // Correctly define the height1 variable
             const height1 = Mec1ContainerRef.current.getBoundingClientRect().height;
             setMec1ContainerHeight(height1); // Store the height of the first iframe container
 
+            if (Mec2ContainerRef.current) {
+                // Correctly define the height2 variable and add it to height1
+                const height2 = Mec2ContainerRef.current.getBoundingClientRect().height;
+                setMec2ContainerHeight(height1 + height2); // Set the combined height of both containers
+            }
 
         }
     };
 
     useEffect(() => {
-        updateIframeHeight(); // Call function on component mount
+        updateMecIframeHeight(); // Call function on component mount
 
         // Add event listener to recalculate height on window resize
-        window.addEventListener('resize', updateIframeHeight);
+        window.addEventListener('resize', updateMecIframeHeight);
 
         // Cleanup listener on component unmount
         return () => {
-            window.removeEventListener('resize', updateIframeHeight);
+            window.removeEventListener('resize', updateMecIframeHeight);
         };
     }, []);
 
@@ -74,7 +86,10 @@ const Mecanique = () => {
                     pointerEvents: 'none', // Ensures that the video is still clickable
                 }}
             ></div>
+
+
             <div
+                ref={Mec2ContainerRef}
                 style={{
                     position: 'relative',
                     width: '100%',
@@ -87,6 +102,7 @@ const Mecanique = () => {
                 }}
             >
                 <iframe
+                    ref={Mec2Ref}
                     loading="lazy"
                     style={{
                         position: 'absolute',
@@ -102,6 +118,21 @@ const Mecanique = () => {
                     title="Mecanic_2"
                 ></iframe>
             </div>
+            {/* Progress Bar Cover */}
+            <div
+                style={{
+                    position: 'absolute',
+                    bottom: '0',
+                    left: '0',
+                    top: `${Mec2ContainerHeight + 115}px`, // Dynamically calculate the top position
+                    width: '100%',
+                    height: '30px', // Adjust height as necessary to cover the progress bar
+                    backgroundColor: 'black', // You can make this transparent or any color that fits
+                    pointerEvents: 'none', // Ensures that the video is still clickable
+                }}
+            ></div>
+
+
             <div
                 style={{
                     position: 'relative',

@@ -56,6 +56,7 @@ const Home = () => {
 
             {/* Iframe Container */}
             <div
+                className="IframeContainer"
                 ref={iframeContainerRef} // Reference to the iframe container
                 style={{
                     position: 'relative',
