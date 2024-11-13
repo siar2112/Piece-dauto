@@ -1,6 +1,6 @@
 const Cars = [
     {
-        image: "/tesla_1.png",
+        image: "/Car1.jpg",
         name: "Mazda 2 2011 Manuel",
         price: 10000.00,
         km: '145 000',

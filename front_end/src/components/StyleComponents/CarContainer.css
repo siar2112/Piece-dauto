@@ -3,6 +3,7 @@
     border:solid 1px grey;
     text-align: left;
     padding-bottom: 2%;
+    width: 100%;
 }
 
 .CarContainer:hover{
@@ -11,7 +12,8 @@
 }
 
 .CarContainer img{
-    height: 200px;
+    height: 500px;
+    width: 800px;
 }
 
 

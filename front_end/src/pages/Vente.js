@@ -6,7 +6,7 @@ import CarContainer from '../components/CarContainer.js';
 const CarListStyles = {
     listContainer: {
         display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', // Ensures responsive 3 columns max
+        gridTemplateColumns: 'repeat(auto-fit, minmax(1000px, 1fr))', // Ensures responsive 3 columns max
         gap: '20px', // Space between grid items
         padding: 0,
         margin: '20px 0',
@@ -19,8 +19,6 @@ const CarListStyles = {
         alignItems: 'center',
     },
     carContainerStyle: {
-        width: '100%',
-        maxWidth: '100%',
         border: '1px solid #ddd',
         borderRadius: '20px',
     },
