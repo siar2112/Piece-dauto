@@ -4,14 +4,6 @@ import Cars from "../CarsToSell/Cars";
 import CarContainer from '../components/CarContainer.js';
 
 const CarListStyles = {
-    listContainer: {
-        display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fit, minmax(1000px, 1fr))', // Ensures responsive 3 columns max
-        gap: '20px', // Space between grid items
-        padding: 0,
-        margin: '20px 0',
-        listStyleType: 'none', // Remove bullet points
-    },
     listItem: {
         marginBottom: '20px',
         display: 'flex',
@@ -29,7 +21,7 @@ const Vente = () => {
     return (
         <div>
             <h1 className="Vente_header">Vente d'autos</h1>
-            <ul style={CarListStyles.listContainer}>
+            <ul className="CarList">
                 {Cars.map((car, index) => (
                     <li className={'CarContainerItem'} key={index} style={CarListStyles.listItem}>
                         <CarContainer Car={car} style={CarListStyles.carContainerStyle} />

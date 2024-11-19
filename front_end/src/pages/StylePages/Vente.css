@@ -5,5 +5,21 @@
     padding-bottom: 2%;
 }
 
+
+.CarList{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+    gap: 20px;
+    padding: 0;
+    margin: 20px 0;
+    list-style-type: none;
+    padding-bottom: 5%;
+}
+
 .CarContainerItem:hover{
+}
+
+
+@media screen and (max-width:1000px){
+
 }

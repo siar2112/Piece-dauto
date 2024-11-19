@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import './StylePages/Piece.css';
 
-
 const Piece = () => {
+    const PieceFrameContainerRef = useRef(null);
 
     return (
         <div>
@@ -21,25 +21,24 @@ const Piece = () => {
                     </p>
                 </div>
                 <div className="piece_img">
-                    <img src="/red-car-body-disassembled-many-vehicles-1355924789-1920w.jpg"
-                         alt="piece_background"/>
+                    <img
+                        src="/red-car-body-disassembled-many-vehicles-1355924789-1920w.jpg"
+                        alt="piece_background"
+                    />
                 </div>
             </div>
-            <h2 className="piece_header_2">
-                Voici une liste des pièces que nous offrons
-            </h2>
+            <h2 className="piece_header_2">Voici une liste des pièces que nous offrons</h2>
+
+            {/* Iframe Container */}
             <div
+                ref={PieceFrameContainerRef}
                 style={{
                     position: 'relative',
                     width: '100%',
                     height: 0,
-                    paddingTop: '56.2225%',
-                    paddingBottom: 0,
-                    marginTop: '1.6em',
-                    marginBottom: '0.9em',
+                    paddingTop: '56.2225%', // Maintain aspect ratio
                     overflow: 'hidden',
                     borderRadius: '8px',
-                    willChange: 'transform',
                 }}
             >
                 <iframe
@@ -51,14 +50,24 @@ const Piece = () => {
                         top: 0,
                         left: 0,
                         border: 'none',
-                        padding: 0,
-                        margin: 0,
                     }}
                     src="https://www.canva.com/design/DAGTmnnmvmQ/iU17K4Wk107bZaJDFPfMng/view?embed"
                     title="Piece_Embed"
                 ></iframe>
-            </div>
 
+                {/* Small Line (Hider) */}
+                <div
+                    style={{
+                        position: 'absolute',
+                        bottom: 0, // Stick to the bottom of the container
+                        left: 0,
+                        width: '100%',
+                        height: '40px', // Small line height
+                        backgroundColor: 'white', // Color of the line
+                        pointerEvents: 'none', // Ensure the line doesn't block iframe interaction
+                    }}
+                ></div>
+            </div>
         </div>
     );
 };
