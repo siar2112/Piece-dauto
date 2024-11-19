@@ -102,6 +102,7 @@
         display: block;
         padding-left: 5%;
         padding-right: 5%;
+        height: 75vh;
     }
 
     .zone-container h1{
