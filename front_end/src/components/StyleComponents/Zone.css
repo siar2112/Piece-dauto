@@ -8,7 +8,7 @@
     background-size: cover;
     background-position: center;
     background-attachment: fixed; /* Creates the parallax effect */
-    height: 100vh; /* Ensure container takes full height for scrolling */
+    height: 135vh; /* Ensure container takes full height for scrolling */
     padding-top: 5%;
     color: white;
 }
@@ -89,7 +89,7 @@
 
 
 .zone-infos-right{
-    margin-left: 20%;
+    margin-left: 15%;
     animation: forwards 3s fade;
 }
 

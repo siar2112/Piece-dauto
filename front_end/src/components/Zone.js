@@ -43,7 +43,7 @@ const Zone = () => {
             <div className="zone-infos-right">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2790.265138846956!2d-73.34532198693822!3d45.62540972254574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc8fdc797e8f7f5%3A0xd6c2382e7c8193b3!2sPi%C3%A8ces%20d&#39;autos%20usag%C3%A9es%20Ste-Julie!5e0!3m2!1sen!2sca!4v1726365044333!5m2!1sen!2sca"
-                    width="800"
+                    width="600"
                     height="600"
                     style={{ border: 0 }}
                     loading="lazy"

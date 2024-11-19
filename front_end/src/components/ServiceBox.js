@@ -9,7 +9,7 @@ const ServiceBox=({serviceTitre, style, link, imgSrc})=>{
         <div>
             <div className="ServiceBox" style={style}>
                 <div style={{paddingLeft: "2%", marginTop: "2%", paddingRight: "2%", textAlign: "center"}}>
-                    <h1 style={{fontSize: "35px"}}>{serviceTitre}</h1>
+                    <h1 style={{fontSize: "25px"}}>{serviceTitre}</h1>
                 </div>
                 <img style={{ width: "100%",paddingBottom:'10%', height:'400px'}}
                      src={imgSrc} alt={serviceTitre}/>
