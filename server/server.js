@@ -26,6 +26,7 @@ app.use(cors({
 app.use(express.json()); // for parsing application/json
 app.use(bodyParser.json()); // for parsing application/json
 app.use(express.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
+app.use(xss());
 
 app.post('/vente', function(req, res) {
     let transporter = nodemailer.createTransport({
