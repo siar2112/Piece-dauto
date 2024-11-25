@@ -96,9 +96,10 @@ const Home = () => {
                     left: '0',
                     top: `${iframeContainerHeight + 115}px`, // Dynamically calculate the top position
                     width: '100%',
-                    height: '30px', // Adjust height as necessary to cover the progress bar
-                    backgroundColor: 'black', // You can make this transparent or any color that fits
+                    height: '40px', // Adjust height as necessary to cover the progress bar
+                    backgroundColor: 'red', // You can make this transparent or any color that fits
                     pointerEvents: 'none', // Ensures that the video is still clickable
+                    display: 'none'
                 }}
             ></div>
 
@@ -142,9 +143,9 @@ const Home = () => {
                     position: 'absolute',
                     bottom: '0',
                     left: '0',
-                    top: `${iframeContainerHeight2 + 140}px`, // Dynamically calculate the top position for second iframe
+                    top: `${iframeContainerHeight2 + 90}px`, // Dynamically calculate the top position for second iframe
                     width: '100%',
-                    height: '40px', // Adjust height as necessary to cover the progress bar
+                    height: '60px', // Adjust height as necessary to cover the progress bar
                     backgroundColor: 'white', // You can make this transparent or any color that fits
                     pointerEvents: 'none', // Ensures that the video is still clickable
                 }}

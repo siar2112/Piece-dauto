@@ -152,7 +152,7 @@ const CarDetails = () => {
             return;
         }
 
-        openModal("Message is being sent");
+        openModal("Le message est en cours d'envoi. Veuillez patienter.");
         const response = await fetch('/vente', {
             method: 'POST',
             headers: {
