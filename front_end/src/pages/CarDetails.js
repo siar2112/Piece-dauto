@@ -80,8 +80,9 @@ const CarDetails = () => {
     },[]);
 
     const [formData, setFormData] = useState({
-        firstName: '',
-        lastName: '',
+        Car: car?.name,
+        Name: '',
+        phoneNumber: '',
         email: '',
         message: '',
     });
@@ -93,14 +94,47 @@ const CarDetails = () => {
         });
     }
 
-    const isValidNameOrSubject = (str) => /^[a-zA-Z-' ]+$/.test(str);
-    const isValidEmail = (str) => /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/.test(str);
+    const isValidNameOrSubject = (str) => /^[a-zA-Z](?!.*[-']{2})[a-zA-Z-' ]*[a-zA-Z]$/.test(str.trim());
+
+    const isValidEmail = (str) => /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/i.test(str.trim());
+
     const isValidMessage = (str) => {
-        // Check against any suspicious patterns or tags
-        if (/\<.*\>/.test(str)) return false;
-        // Add more validation if needed
+        // Check against HTML tags
+        if (/</.test(str) || />/.test(str)) return false;
+
+        // Ensure meaningful content (at least 3 non-space characters)
+        if (str.trim().length < 3) return false;
+
         return true;
     };
+
+    const validateForm = () => {
+        let errors = [];
+
+        if (!isValidNameOrSubject(formData.Name)) {
+            errors.push("Le nom ou sujet est invalide.");
+        }
+
+        if (!/^\d{10}$/.test(formData.phoneNumber)) { // Assuming 10-digit phone numbers
+            errors.push("Le numéro de téléphone est invalide.");
+        }
+
+        if (!isValidEmail(formData.email)) {
+            errors.push("L'email est invalide.");
+        }
+
+        if (!isValidMessage(formData.message)) {
+            errors.push("Le message est invalide.");
+        }
+
+        if (errors.length > 0) {
+            openModal(errors.join("\n")); // Show all errors in the modal
+            return false;
+        }
+
+        return true; // Form is valid
+    };
+
 
 
 
@@ -109,21 +143,17 @@ const CarDetails = () => {
         //verify input
         for (let property in formData) {
             if (formData[property] === '') {
-                openModal('Please fill al data');
+                openModal('Please fill all data');
                 return;
             }
         }
 
-        if (!isValidNameOrSubject(formData.firstName) ||
-            !isValidNameOrSubject(formData.lastName) ||
-            !isValidEmail(formData.email) ||
-            !isValidMessage(formData.message)) {
-            openModal('Invalid input');
+        if (!validateForm()){
             return;
         }
 
         openModal("Message is being sent");
-        const response = await fetch('/contact', {
+        const response = await fetch('/vente', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -133,11 +163,11 @@ const CarDetails = () => {
         });
         if (response.ok){
             closeModal();
-            openModal('Message successfully sent!');
+            openModal('Intérêt envoyé avec succès!');
         }
         else{
             closeModal();
-            openModal('An error occurred while sending the message. Please retry');
+            openModal('Une erreur est survenue lors de l’envoi de votre intérêt. Veuillez réessayer plus tard.');
         }
     }
 
@@ -188,15 +218,15 @@ const CarDetails = () => {
                     paddingBottom: "5%",
                 }}>
                     <li style={{position: "relative"}}>
-                        <InputTextField name="firstName" onChange={handleChange} type="text"
+                        <InputTextField name="Name" onChange={handleChange} type={"text"}
                                         label="Nom prénom"></InputTextField>
                     </li>
                     <li style={{position: "relative"}}>
-                        <InputTextField name="lastName" onChange={handleChange} type="tel"
-                                        label="Numéro de téléphone" pattern={"[0-9]{3}-[0-9]{2}-[0-9]{3}"}></InputTextField>
+                        <InputTextField name="phoneNumber" onChange={handleChange} type={"text"}
+                                        label="Numéro de téléphone"></InputTextField>
                     </li>
                     <li style={{position: "relative"}}>
-                        <InputTextField name="email" onChange={handleChange} type="email"
+                        <InputTextField name="email" onChange={handleChange} type={"email"}
                                         label="Adresse Email"></InputTextField>
                     </li>
                     <li style={{position: "relative",marginTop:"10%"}}>

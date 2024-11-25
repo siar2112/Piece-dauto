@@ -93,7 +93,7 @@ const Navigation = () => {
                            onRequestClose={closeModal}
                            style={ModalNavStyles}
                            contentLabel="Example Modal">
-                        <button className="ModalNavClosebutt" onClick={closeModal}><ion-icon name="close-circle-outline"></ion-icon></button>
+                        <button className="ModalClosebutt" onClick={closeModal}><ion-icon name="close-circle-outline"></ion-icon></button>
                         <ul style={{zIndex:"10"}}>
                             <li>
                                 <Nav.Link className="NavLink" style={{ marginLeft: "40px" }} onClick={() => handleLinkClick("/")}>Accueil</Nav.Link>

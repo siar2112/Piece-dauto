@@ -1,52 +1,52 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef} from 'react';
 
 const Mecanique = () => {
     const Mec1Ref = useRef(null);
     const Mec1ContainerRef = useRef(null);
-    const [Mec1ContainerHeight, setMec1ContainerHeight] = useState(0);
+    //const [Mec1ContainerHeight, setMec1ContainerHeight] = useState(0);
 
     const Mec2Ref = useRef(null);
     const Mec2ContainerRef = useRef(null);
-    const [Mec2ContainerHeight, setMec2ContainerHeight] = useState(0);
+    //const [Mec2ContainerHeight, setMec2ContainerHeight] = useState(0);
 
     const Mec3Ref = useRef(null);
     const Mec3ContainerRef = useRef(null);
-    const [Mec3ContainerHeight, setMec3ContainerHeight] = useState(0);
+    //const [Mec3ContainerHeight, setMec3ContainerHeight] = useState(0);
 
     const Mec4Ref = useRef(null);
     const Mec4ContainerRef = useRef(null);
-    const [Mec4ContainerHeight, setMec4ContainerHeight] = useState(0);
+    //const [Mec4ContainerHeight, setMec4ContainerHeight] = useState(0);
 
-    const updateMecIframeHeight = () => {
+   /* const updateMecIframeHeight = () => {
         if (Mec1ContainerRef.current) {
             const height1 = Mec1ContainerRef.current.getBoundingClientRect().height;
-            setMec1ContainerHeight(height1);
+            //setMec1ContainerHeight(height1);
         }
 
         if (Mec2ContainerRef.current) {
             const height2 = Mec2ContainerRef.current.getBoundingClientRect().height;
-            setMec2ContainerHeight(height2);
+            //setMec2ContainerHeight(height2);
         }
 
         if (Mec3ContainerRef.current) {
             const height3 = Mec3ContainerRef.current.getBoundingClientRect().height;
-            setMec3ContainerHeight(height3);
+            //setMec3ContainerHeight(height3);
         }
 
         if (Mec4ContainerRef.current) {
             const height4 = Mec4ContainerRef.current.getBoundingClientRect().height;
-            setMec4ContainerHeight(height4);
+            //setMec4ContainerHeight(height4);
         }
-    };
+    };*/
 
-    useEffect(() => {
+    /*useEffect(() => {
         updateMecIframeHeight();
 
         window.addEventListener('resize', updateMecIframeHeight);
         return () => {
             window.removeEventListener('resize', updateMecIframeHeight);
         };
-    }, []);
+    }, []);*/
 
     return (
         <div>

@@ -38,7 +38,7 @@ const Footer=()=>{
                             </li>
                             <li>
                                 <a target="_blank" rel="noopener noreferrer"
-                                   href="https://www.instagram.com">Instagram<ion-icon name="logo-instagram"></ion-icon></a>
+                                   href="https://www.instagram.com/paustejulie/">Instagram<ion-icon name="logo-instagram"></ion-icon></a>
                             </li>
                         </ul>
                     </li>
