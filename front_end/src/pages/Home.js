@@ -17,6 +17,7 @@ const Home = () => {
     const [iframeContainerHeight, setIframeContainerHeight] = useState(0); // State to store the height
     const iframeContainerRef2 = useRef(null); // Reference to the second iframe container
     const [iframeContainerHeight2, setIframeContainerHeight2] = useState(0); // State to store the second iframe container's height
+    const [isMobile] = useState(window.innerWidth < 1000);
 
     // Function to calculate and update the iframe container's height
     const updateIframeHeight = () => {
@@ -94,12 +95,11 @@ const Home = () => {
                     position: 'absolute',
                     bottom: '0',
                     left: '0',
-                    top: `${iframeContainerHeight + 115}px`, // Dynamically calculate the top position
+                    top: `${iframeContainerHeight + (isMobile ? 60 : 115)}px`, // Dynamically calculate the top position
                     width: '100%',
                     height: '40px', // Adjust height as necessary to cover the progress bar
-                    backgroundColor: 'red', // You can make this transparent or any color that fits
+                    backgroundColor: 'black', // You can make this transparent or any color that fits
                     pointerEvents: 'none', // Ensures that the video is still clickable
-                    display: 'none'
                 }}
             ></div>
 
@@ -145,7 +145,7 @@ const Home = () => {
                     left: '0',
                     top: `${iframeContainerHeight2 + 90}px`, // Dynamically calculate the top position for second iframe
                     width: '100%',
-                    height: '60px', // Adjust height as necessary to cover the progress bar
+                    height: '65px', // Adjust height as necessary to cover the progress bar
                     backgroundColor: 'white', // You can make this transparent or any color that fits
                     pointerEvents: 'none', // Ensures that the video is still clickable
                 }}
