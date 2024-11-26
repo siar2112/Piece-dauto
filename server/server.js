@@ -30,23 +30,23 @@ app.use(xss());
 
 app.post('/vente', function(req, res) {
     let transporter = nodemailer.createTransport({
-        host: "smtp.office365.com", // hostname
-        secure: false, // true for 465, false for other ports
-        port: 587, // port for secure SMTP
+        host: "smtp.gmail.com", // hostname
+        secure: true, // true for 465, false for other ports
+        port: 465, // port for secure SMTP
         tls: {
             ciphers:'SSLv3'
         },
         auth: {
-            user: 'Siar-message-service@outlook.com',
-            pass: 'LeoMessi2112'
+            user: 'paustejulie.achat.auto@gmail.com',
+            pass: 'tngggwkhlmpuvfjz'
         }
     });
 
     let mailOptions = {
-        from: 'Siar-message-service@outlook.com',
+        from: 'paustejulie.achat.auto@gmail.com',
         to: 'siarradjabi@gmail.com',
-        subject: 'Intérêt  achat d\'auto ' + req.body.car,
-        text:'Nom: '+req.body.name+'\n'+'Téléphone: '+req.body.phoneNumber+'\n'+'Email: '+req.body.email+'\n'+ '\n\nMessage:\n' + req.body.message,
+        subject: 'Intérêt  achat d\'auto ' + req.body.Car,
+        text:'Nom: '+req.body.Name+'\n'+'Téléphone: '+req.body.phoneNumber+'\n'+'Email: '+req.body.email+'\n'+ '\n\nMessage:\n' + req.body.message,
     };
     transporter.sendMail(mailOptions, function(error, info) {
         if (error) {
