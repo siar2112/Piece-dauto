@@ -180,7 +180,7 @@ const Home = () => {
             </ul>
 
             <div style={{marginTop: '5%'}}>
-                <LinkButton link='/' buttonText="En savoir plus"> </LinkButton>
+                <LinkButton link='/Mecanique' buttonText="En savoir plus"> </LinkButton>
             </div>
 
             <div style={{marginTop: '5%'}}>
