@@ -79,7 +79,7 @@ const Footer=()=>{
                         pau.stejulie@hotmail.com
                     </li>
                     <li>
-                        773 Rue Saint-Jacques, Saint-Jean-sur-Richelieu, QC J3B 2M9
+                        1002 Rue De Touraine Sainte-Julie, QC J3E 1Y2
                     </li>
                 </ul>
             </div>
