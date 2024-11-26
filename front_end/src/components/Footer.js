@@ -22,13 +22,13 @@ const Footer=()=>{
                         </div>
                     </li>
                     <li id="second_li">
-                        <p id="Book_your_place">Contactez-Nous</p>
+                        <p id="Book_your_place">Vente d'autos</p>
                     </li>
                     <li>
-                        <p id="Barber_credit">Pour toutes questions ou pour obtenir une estimation gratuite, n’hésitez pas à nous contacter.
-                            Nous nous ferons un plaisir d’échanger avec vous et de vous donner entière satisfaction!
+                        <p id="Barber_credit">Vous êtes à la recherche d’une voiture d’occasion fiable et abordable ? Découvrez notre large sélection de véhicules usagés prêts à répondre à vos besoins.
+                            Cliquez ci-dessous pour explorer nos offres et trouver la voiture idéale pour vous !
                         </p>
-                        <Nav.Link onClick={() => handleLinkClick("/catalogue")} className="Credit_Barber">Contactez-Nous</Nav.Link>
+                        <Nav.Link onClick={() => handleLinkClick("/Vente")} className="Credit_Barber">Voir nos Autos</Nav.Link>
                     </li>
                     <li>
                         <ul className="credit_logo">
