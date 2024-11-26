@@ -44,7 +44,7 @@ app.post('/vente', function(req, res) {
 
     let mailOptions = {
         from: 'paustejulie.achat.auto@gmail.com',
-        to: 'siarradjabi@gmail.com',
+        to: 'pau.stejulie@hotmail.com',
         subject: 'Intérêt  achat d\'auto ' + req.body.Car,
         text:'Nom: '+req.body.Name+'\n'+'Téléphone: '+req.body.phoneNumber+'\n'+'Email: '+req.body.email+'\n'+ '\n\nMessage:\n' + req.body.message,
     };
