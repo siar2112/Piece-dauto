@@ -84,7 +84,7 @@ const Footer=()=>{
                 </ul>
             </div>
             <div className="copyright">
-                <p>Copyright ©2024. Pièces d’autos usagées Ste-Julie inc. reserved.</p>
+                <p>Copyright ©2025. Pièces d’autos usagées Ste-Julie inc. reserved.</p>
             </div>
         </div>
     );
