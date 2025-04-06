@@ -21,13 +21,14 @@ const Vente = () => {
     return (
         <div>
             <h1 className="Vente_header">Vente d'autos</h1>
-            <ul className="CarList">
+            {/*<ul className="CarList">
                 {Cars.map((car, index) => (
                     <li className={'CarContainerItem'} key={index} style={CarListStyles.listItem}>
                         <CarContainer Car={car} style={CarListStyles.carContainerStyle} />
                     </li>
                 ))}
-            </ul>
+            </ul>*/}
+            <h2>À VENIR</h2>
         </div>
     );
 };
