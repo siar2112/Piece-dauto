@@ -69,17 +69,17 @@ const Navigation = () => {
                             <Nav.Link className="nav-link-custom" style={{ marginLeft: '40px' }} onClick={() => handleLinkClick('/')}>
                                 Accueil
                             </Nav.Link>
+                            <Nav.Link className="nav-link-custom" style={{ marginLeft: '40px' }} onClick={() => handleLinkClick('/Achat')}>
+                                Vendre votre auto
+                            </Nav.Link>
                             <Nav.Link className="nav-link-custom" style={{ marginLeft: '40px' }} onClick={() => handleLinkClick('/Piece')}>
-                                Pièce
+                                Pièce d'autos
                             </Nav.Link>
                             <Nav.Link className="nav-link-custom" style={{ marginLeft: '40px' }} onClick={() => handleLinkClick('/Mecanique')}>
                                 Mécanique générale
                             </Nav.Link>
-                            <Nav.Link className="nav-link-custom" style={{ marginLeft: '40px' }} onClick={() => handleLinkClick('/Achat')}>
-                                Achat de véhicule
-                            </Nav.Link>
                             <Nav.Link className="nav-link-custom" style={{ marginLeft: '40px' }} onClick={() => handleLinkClick('/Vente')}>
-                                Vente d'autos
+                                Autos à vendre
                             </Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
