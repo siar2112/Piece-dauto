@@ -1,0 +1,32 @@
+
+.next-arrow, .prev-arrow {
+    position: absolute;
+    top: 50%;
+    font-size: 30px;
+    cursor: pointer;
+    color: black;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.next-arrow {
+    right: 0;
+}
+
+
+.ArticleBox{
+    width: 75%;
+    margin-left: 10%;
+}
+
+.prev-arrow {
+}
+
+.slider-container {
+}
+
+@media screen and (max-width:775px){
+    .prev-arrow,.next-arrow {
+        display: none;
+    }
+}

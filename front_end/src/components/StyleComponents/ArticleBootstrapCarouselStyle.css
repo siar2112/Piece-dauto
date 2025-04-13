@@ -1,0 +1,66 @@
+#Bosscut_Carousel{
+    margin-top: 5%;
+    width: 80%;
+    margin-left: 12.5%;
+    margin-right: 7.5%;
+    height: 25%;
+    border: 1px solid black;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    width: 5%; }
+
+
+.carousel .carousel-indicators li.active {
+    background-color: black;
+}
+
+
+.carousel .carousel-indicators li {
+    background-color: black;
+}
+
+.carousel-control-next,
+.carousel-control-prev /*, .carousel-indicators */ {
+    filter: invert(100%);
+}
+
+
+
+#Bosscut_Carousel {
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 2px; }
+
+#Bosscut_Carousel::before {
+    content: '';
+    background-image: conic-gradient(red 20deg, transparent 120deg);
+    height: 150%;
+    width: 150%;
+    position: absolute;
+    animation: rotate 7s infinite linear;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+#Bosscut_Carousel::after {
+    content: '';
+    height: 94%;
+    width: 94%;
+    position: absolute;
+    border-radius: 5px;
+    top: 3%;
+    left: 3%;
+    color: red;
+}
+
+
+@media screen and (max-width: 775px) {
+    .carousel-indicators{
+        display: none;
+    }
+}

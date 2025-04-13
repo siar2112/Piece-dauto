@@ -1,0 +1,93 @@
+.ArticleBox{
+    border-radius: 20px;
+    border:solid 1px grey;
+    text-align: left;
+    padding-bottom: 2%;
+}
+
+.ArticleBox:hover{
+    cursor: pointer;
+    box-shadow: gray 0px 0px 22px 4px;
+}
+
+
+
+
+
+.ArticleBox img{
+    height: 200px;
+}
+
+.ModalClosebutt{
+    font-size: 30px;
+    background: none;
+    border: none;
+}
+
+.ModalImageContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.ModalList{
+    list-style-type: none;
+    font-size: 22px;
+    padding-bottom: 2%;
+    width: 80%;
+    margin-left: 10%;
+}
+
+.DownButt,.UpButt{
+    font-size: 25px;
+    background: none;
+    border: none;
+}
+
+.AddCartButt{
+    border-radius: 20px;
+    padding-left: 2%;
+    padding-right: 2%;
+    background-color: white;
+}
+.AddCartButt:hover{
+    border: 1px solid red;
+    color: white;
+    background-color: black;
+}
+
+
+
+
+@media screen and (max-width:775px){
+    .ArticleBox img{
+        height: 100px;
+        border-radius: 0!important;
+    }
+
+    .ArticleBox{
+        border: none;
+    }
+
+    .TheModal{
+    }
+
+    .ModalList{
+        margin-left: 0;
+        width: 100%;
+        font-size: 20px;
+    }
+
+    .ModalImageContainer img{
+        width: 200px;
+    }
+}
+
+@media screen and (max-width:400px){
+
+    .UpButt,.DownButt{
+        font-size: 18px;
+    }
+
+}
