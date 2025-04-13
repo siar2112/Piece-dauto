@@ -21,7 +21,7 @@ const PrevArrow = ({ onClick }) => {
     );
 };
 
-const ArticleSlider = () => {
+const ArticleSlider = ({ articles }) => {
     const settings = {
         dots: true,
         infinite: true,

@@ -6,7 +6,7 @@ import Piece from './pages/Piece';
 import Navigation from './components/Navigation.js';
 import Footer from "./components/Footer";
 import Mecanique from "./pages/Mecanique";
-import Achat from "./pages/Achat";
+import Achat from "./pages/AchatV1";
 import Vente from "./pages/Vente";
 import CarDetails from "./pages/CarDetails";
 
