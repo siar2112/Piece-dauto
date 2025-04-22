@@ -21,12 +21,12 @@ const PrevArrow = ({ onClick }) => {
     );
 };
 
-const ArticleSlider = ({ articles }) => {
+const ArticleSlider = ({ articles, boxStyle }) => {
     const settings = {
-        dots: true,
+        dots: false,
         infinite: true,
         speed: 500,
-        slidesToShow: 3,
+        slidesToShow: 1,
         slidesToScroll: 1,
         nextArrow: <NextArrow />,
         prevArrow: <PrevArrow />,
@@ -39,7 +39,7 @@ const ArticleSlider = ({ articles }) => {
                 <Slider {...settings}>
                     {articles.map((article, index) => (
                         <div key={index}>
-                            <ArticleBox className="ArticleBox" article={article} />
+                            <ArticleBox className="ArticleBox" article={article} style={boxStyle} />
                         </div>
                     ))}
                 </Slider>
