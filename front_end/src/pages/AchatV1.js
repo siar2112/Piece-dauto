@@ -5,23 +5,26 @@ import Cars from "../SliderArticle/AchatCarsToShow";
 
 const Achat = () => {
 
-    function importAllArticles(r) {
-        return r.keys().map(key => r(key).default);
-    }
+    const smallBoxStyle = {
+        width: "450px",
+        height: "auto",
+        margin: "0 auto",
+        textAlign: "center",
+    };
 
-    const articles = importAllArticles(require.context('../SliderArticle', false, /\.js$/));
+
 
     return (
         <div>
             <div className="AchatFirstView">
-                <h1>Vendre votre auto</h1>
-                <ArticleSlider articles={articles}></ArticleSlider>
-                <h2>Peut-importe l'état de votre véhicule, nous achetons </h2>
+                <h1 className="WeBuyTitle">NOUS ACHETONS!!!</h1>
+                <ArticleSlider articles={Cars} boxStyle={smallBoxStyle}></ArticleSlider>
+                <h2 className="NoMatterWhatTitle"> Peu-importe l'état de votre véhicule </h2>
             </div>
 
 
             <div className="Achat_component">
-                <h1>Comment procéder si vous souhaitez vendre votre véhicule?</h1>
+                <h1>Étape à suivre pour la vente de votre véhicule</h1>
                 <ol>
                     <li>Prise de contact au (514) 515-8669</li>
                     <li>Proposition du prix d’achat par téléphone</li>

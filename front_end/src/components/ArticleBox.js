@@ -8,7 +8,7 @@ const customStyles = {
         bottom: 'auto',
         marginRight: '-50%',
         transform: 'translate(-50%, -50%)',
-        width:'75%',
+        maWidth:'75%',
         zIndex:'1',
         borderRadius:'20px',
 
@@ -21,7 +21,7 @@ const ArticleBox=({article, style})=>{
     return (
         <div>
             <div className="ArticleBox" style={style}>
-                <img style={{borderTopRightRadius:"20px", borderTopLeftRadius:"20px",width:"100%"}} src={article.image} alt={article.name}/>
+                <img style={{borderTopRightRadius:"20px", borderTopLeftRadius:"20px",maxWidth:"100%"}} src={article.image} alt={article.name} loading="lazy" />
             </div>
         </div>
     );
