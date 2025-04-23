@@ -73,7 +73,7 @@ const Footer=()=>{
                         (450) 649-4444
                     </li>
                     <li>
-                        https://pieceDautoSteJulie.com/
+                        https://paustejulie.ca
                     </li>
                     <li>
                         pau.stejulie@hotmail.com
