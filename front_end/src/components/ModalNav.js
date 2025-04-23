@@ -58,13 +58,13 @@ const ModalNav = () => {
                         <Nav.Link className="NavLink" style={{ marginLeft: "40px" }} onClick={() => handleLinkClick("/")}>Accueil</Nav.Link>
                     </li>
                     <li>
-                        <Nav.Link className="NavLink" style={{ marginLeft: "40px" }} onClick={() => handleLinkClick("/Piece")}>Pièce</Nav.Link>
+                        <Nav.Link className="NavLink" style={{ marginLeft: "40px" }} onClick={() => handleLinkClick("/Achat")}>Achat de véhicule</Nav.Link>
                     </li>
                     <li>
                         <Nav.Link className="NavLink" style={{ marginLeft: "40px" }} onClick={() => handleLinkClick("/Mecanique")}>Mécanique générale</Nav.Link>
                     </li>
                     <li>
-                        <Nav.Link className="NavLink" style={{ marginLeft: "40px" }} onClick={() => handleLinkClick("/Achat")}>Achat de véhicule</Nav.Link>
+                        <Nav.Link className="NavLink" style={{ marginLeft: "40px" }} onClick={() => handleLinkClick("/Piece")}>Pièce</Nav.Link>
                     </li>
                     <li>
                         <Nav.Link className="NavLink" style={{ marginLeft: "40px" }} onClick={() => handleLinkClick("/Vente")}>Vente d'autos</Nav.Link>

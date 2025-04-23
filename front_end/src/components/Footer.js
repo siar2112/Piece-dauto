@@ -52,13 +52,13 @@ const Footer=()=>{
                         <Nav.Link onClick={() => handleLinkClick("/")}>Accueil</Nav.Link>
                     </li>
                     <li>
-                        <Nav.Link onClick={() => handleLinkClick("/Piece")}>Pièce</Nav.Link>
+                        <Nav.Link href="#" onClick={() => handleLinkClick("/Achat")}>Achat de véhicule</Nav.Link>
                     </li>
                     <li>
                         <Nav.Link onClick={() => handleLinkClick("/Mecanique")}>Mécanique générale</Nav.Link>
                     </li>
                     <li>
-                        <Nav.Link href="#" onClick={() => handleLinkClick("/Achat")}>Achat de véhicule</Nav.Link>
+                        <Nav.Link onClick={() => handleLinkClick("/Piece")}>Pièce</Nav.Link>
                     </li>
                     <li>
                         <Nav.Link href="#" onClick={() => handleLinkClick("/Vente")}>Vente d'autos</Nav.Link>

@@ -26,7 +26,7 @@ const Achat = () => {
             <div className="Achat_component">
                 <h1>Étape à suivre pour la vente de votre véhicule</h1>
                 <ol>
-                    <li>Prise de contact au (514) 515-8669</li>
+                    <li>Prise de contact au <a href="tel:+15145158669">(514) 515-8669</a></li>
                     <li>Proposition du prix d’achat par téléphone</li>
                     <li>
                         Récupération du véhicule dans un délai de moins de 24h (service de remorquage gratuit)
