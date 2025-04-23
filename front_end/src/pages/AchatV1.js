@@ -19,7 +19,7 @@ const Achat = () => {
             <div className="AchatFirstView">
                 <h1 className="WeBuyTitle">NOUS ACHETONS!!!</h1>
                 <ArticleSlider articles={Cars} boxStyle={smallBoxStyle}></ArticleSlider>
-                <h2 className="NoMatterWhatTitle"> Peu-importe l'état de votre véhicule </h2>
+                <h2 className="NoMatterWhatTitle"> Peu importe l'état de votre véhicule </h2>
             </div>
 
 
