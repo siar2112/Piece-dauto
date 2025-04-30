@@ -43,7 +43,21 @@
 
 .scrollable{
     overflow-y: scroll;
-    max-height: 500px;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+.scrollable {
+    scrollbar-width: thin; /* Firefox */
+}
+
+.scrollable::-webkit-scrollbar {
+    width: 20px;
+}
+
+.scrollable::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
 }
 
 .step1,.step2,.step3,.step4,.step5,.step6{
@@ -63,18 +77,6 @@
 
 
 
-.step1{
-}
-
-.step2,.step3,.step4,.step5,.step6{
-    visibility: hidden;
-}
-
-
-.step1 img{
-    max-width: 500px;
-    height: auto;
-}
 
 .Achat_component h1{
     text-align: center;
@@ -103,14 +105,26 @@
     margin-right: 30%;
 }
 
-@media (max-width: 768px) {
-    .step1 {
-        flex-direction: column;
-        text-align: center;
+@media (max-width: 1000px) {
+    .step1,.step2,.step3,.step4,.step5,.step6{
+        display: block!important;
+        min-height: 40vh!important;
     }
-    .step1 img {
-        margin-top: 10px;
+
+    .scrollable {
+        height: 50vh!important;
     }
+
+    .Beneficier{
+        font-size: 2.5vw!important;
+        padding-left: 10%!important;
+        padding-right: 10%!important;
+    }
+
+    .stepTitle{
+        font-size: 3vw!important;
+    }
+
 }
 
 
