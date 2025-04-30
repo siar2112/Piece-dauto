@@ -23,6 +23,16 @@ const Achat = () => {
         "6. Recyclage du véhicule"
     ], []);
 
+    const stepImages = useMemo(() => [
+        "shutterstock_1906589005-640w.jpg",
+        "hunters-race-MYbhN8KaaEc-unsplash.jpg",
+        "towing.jpg",
+        "amina-atar-Mqc-m8kgxkg-unsplash.jpg",
+        "giorgio-trovato-WyxqQpyFNk8-unsplash.jpg",
+        "old-rusty-corroded-cars-car-scrapyard-740650411-2880w.jpg"
+    ], []);
+
+
     const animations = [
         'fade-in',
         'slide-in-left',
@@ -109,9 +119,9 @@ const Achat = () => {
                             </div>
                             <div>
                                 <img
-                                    src="shutterstock_1906589005-640w.jpg"
-                                    alt="achat_background"
-                                    style={{ maxWidth: "500px", height: "auto" }}
+                                    src={stepImages[index]}
+                                    alt={`Step ${index + 1}`}
+                                    style={{maxWidth: "500px", height: "auto"}}
                                 />
                             </div>
                         </div>
